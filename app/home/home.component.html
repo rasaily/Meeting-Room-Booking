@@ -1,0 +1,61 @@
+<div class="grid-container">
+  <h1 class="mat-h1"><B>HOME</B></h1>
+  <mat-grid-list cols="2" rowHeight="700px">
+
+    
+    
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+               
+          <mat-card-title>
+            <h1>BOOK YOUR MEETING TODAY 
+            </h1>
+
+            <form action="/action_page.php">
+              <div class="container">
+                
+                
+            <div>
+            <label for="birthday">select date:</label>
+            <input type="date" 
+              id="meeting date" name="date">
+              
+            </div>
+              
+            <input type="text" placeholder="NAME" name="text" id="text" required>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <input type="text" placeholder="phone no" name="number" id="number" required>
+            <input type="text" placeholder="time" name="time" id="time" required>
+              
+              
+                  
+                  
+              
+                  <button type="submit" class="registerbtn">Submmit</button>
+                </div>
+                
+                
+              </form>
+            
+                      
+             
+            <mat-menu #menu="matMenu" xPosition="before">
+              
+              
+            </mat-menu>
+          </mat-card-title>
+
+        
+          
+        </mat-card-header>
+      
+        <mat-card-content class="dashboard-card-content">
+          
+        </mat-card-content>
+       
+      </mat-card>
+    </mat-grid-tile>
+  
+  </mat-grid-list>
+
